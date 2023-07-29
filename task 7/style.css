@@ -1,0 +1,113 @@
+body{
+background-image: url(images/6ehQj3.webp);
+background-size: cover;
+}
+*{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}   
+.formstyle
+{
+width: 300px;
+height: 380px;
+margin: 20px auto;
+border: 2px solid rgb(255, 255, 255,0.4);
+border-radius: 20px;
+padding: 20px;
+text-align: center;
+box-shadow: 0 0 25px #250122;
+/* margin-top: -20px; */
+background: conic-gradient(transparent 270deg,white transparent);
+}
+h1 {
+	text-align: center;
+	padding: 23px;
+	color: white;
+    font-family: 'Times New Roman', Times, serif;
+	}
+ #num{
+        background-color: #15071e6e;
+    }
+#num:hover{
+    background-color:rgb(91,44,92);
+    }
+input:hover
+{
+    background-color:rgb(91,44,92);
+    border: 2px solid rgb(213, 132, 217);
+    /* animation:animate .75s linear infinite; */
+    transition: 0.1s;
+}
+	
+*{
+margin: 0;
+padding: 0;
+}
+
+.btn{
+width: 50px;
+height: 50px;
+font-size: 25px;
+margin: 2px;
+cursor: pointer;
+color: white;
+border-radius: 10px;
+background: transparent;
+backdrop-filter: blur(10px);
+box-shadow: 0 0 6px #250122;
+border: 2px solid rgb(255, 255, 255,0.7);
+
+
+}
+
+.textview{
+width: 240px;
+margin: 5px;
+font-size: 25px;
+padding: 5px;
+border-radius: 10px;
+background-color: #914f8c;
+color: white;
+border: 2px solid rgb(255, 255, 255,0.7);
+box-shadow: 0 0 10px #250122;
+
+
+}	
+.textview:hover{
+border: 1px solid rgb(255, 255, 255);
+transition: border 0.5s ease;
+transition: 0.1s;
+
+}
+
+/* .formstyle{
+    position: relative;
+    overflow: hidden;
+}
+.formstyle::before{
+    content: '';
+    position: absolute;
+    margin-top: -40px;
+    border-radius: 20px;
+    width: 40px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background:white;
+    animation: rotate 4s linear infinite;
+    z-index: -2;
+}
+.formstyle::after{
+   content: '';
+   position: absolute;
+   inset: 5px;
+   
+   
+}
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}  

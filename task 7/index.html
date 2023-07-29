@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>task 7</title>
+</head>
+<script type="text/JavaScript">
+    function sinclicked(){
+     form1.textview.value=Math.sin(form1.textview.value*Math.PI/180)
+}    
+function cosclicked(){
+    form1.textview.value=Math.cos(form1.textview.value*Math.PI/180)
+}  
+function logclicked(){
+    form1.textview.value=Math.log10(form1.textview.value)
+}  
+function floorclicked(){
+    form1.textview.value=Math.floor(form1.textview.value)
+}  
+function ceilclicked(){
+    form1.textview.value=Math.ceil(form1.textview.value)
+}  
+function tanclicked(){
+    form1.textview.value=Math.tan(form1.textview.value*Math.PI/180)
+} 
+function areaclicked() {
+    form1.textview.value=Math.PI*form1.textview.value**2;
+}
+function circlicked() {
+    form1.textview.value=2*Math.PI*form1.textview.value;
+}
+</script>
+<body>
+    <link rel="stylesheet" href="style.css">
+    <h1>Hello,  <span id="nameElement" style="font-family: Cambria, Cochin,
+        Georgia, Times, 'Times New Roman', serif; text-transform: capitalize;"></span>.</h1>
+ <div class= "formstyle">
+ <form name = "form1">
+ <input class= "textview" name = "textview">
+ </form>
+ <center>
+ <table >
+ <tr> 
+	<td> <input class = "btn" type = "button" value = "C" onclick = "form1.textview.value = ' ' " > </td>
+	<td> <input  class = "btn" type = "button" value = "B" onclick = "backspace()" > </td>
+	<td> <input  class = "btn" type = "button" value = "/" onclick = "insert('/')" > </td>
+	<td> <input class = "btn" type = "button" value = "*" onclick = "insert('*')" > </td>
+    <td> <input class = "btn" type = "button" value = "sin" onclick = "sinclicked()" > </td>
+</tr>
+	
+	 <tr> 
+	<td> <input class = "btn" type = "button" value = "7" onclick = "insert(7)" id="num" > </td>
+	<td> <input class = "btn" type = "button" value = "8" onclick = "insert(8)"id="num" > </td>
+	<td> <input class = "btn" type = "button" value = "9" onclick = "insert(9)"id="num" > </td>
+	<td> <input class = "btn" type = "button" value = "-" onclick = "insert('-')" > </td>
+	<td> <input class = "btn" type = "button" value = "cos" onclick = "cosclicked()" > </td>	
+</tr>
+	
+	 <tr> 
+	<td> <input class = "btn" type = "button" value = "4" onclick = "insert(4)" id="num"> </td>
+	<td> <input class = "btn" type = "button" value = "5" onclick = "insert(5)"id="num" > </td>
+	<td> <input class = "btn" type = "button" value = "6" onclick = "insert(6)"id="num" > </td>
+	<td> <input class = "btn" type = "button" value = "+" onclick = "insert('+')" > </td>
+	<td> <input class = "btn" type = "button" value = "tan" onclick = "tanclicked()" > </td>
+
+	</tr>
+	
+	 <tr> 
+	<td> <input class = "btn" type = "button" value = "1" onclick = "insert(1)"id="num" > </td>
+	<td> <input class = "btn" type = "button" value = "2" onclick = "insert(2)"id="num" > </td>
+	<td> <input class = "btn" type = "button" value = "3" onclick = "insert(3)"id="num" > </td>
+	<td> <input class = "btn" type = "button" value = "floor" onclick = "floorclicked()"style="font-size: 20px; "> </td>
+	<td> <input class = "btn" type = "button" value = "log" onclick = "logclicked()" > </td>
+	</tr>
+	<tr>
+	<td> <input class = "btn" type = "button" value = "0" onclick = "insert(0)"id="num" > </td>
+	<td> <input class = "btn" type = "button" value = "." onclick = "insert('.')"> </td>
+	<td> <input class = "btn" type = "button" value = "**" onclick = "insert('**')"> </td>
+	<td> <input class = "btn" type = "button" value = "ceil" onclick = "ceilclicked()" style="font-size: 20px;" > </td>
+	<td rowspan = 3> <input class = "btn" style = "height: 110px" type = "button" value = "=" onclick = "equal()"> </td>
+</tr>
+    <tr>
+        <td colspan="2"><input style="width: 110px; font-size: 20px;" class = "btn" type="button" value="area"onclick = "areaclicked()" ></td>
+        <td colspan="2" ><input style="width: 110px;font-size: 15px;" class = "btn" type="button" value="circumference" onclick = "circlicked()"></td>
+    </tr>
+	</table>
+	</center>
+ </div>
+\<script>
+        var name = prompt("please enter your name");
+        nameElement.textContent = name;
+
+
+    function insert(num) 
+    {
+    document.form1.textview.value = document.form1.textview.value + num;
+    }
+    
+    function equal()
+    {
+    var exp = document.form1.textview.value;
+    if(exp)
+    {
+    document.form1.textview.value = eval(exp)
+    }
+    }
+    
+    function backspace()
+    {
+    var exp = document.form1.textview.value;
+    document.form1.textview.value = exp.substring(0, exp.length - 1); 
+    }
+    </script>
+ </body>
+ </html>
+
+ 
